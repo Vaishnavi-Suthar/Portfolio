@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Suthar - UI/UX Designer & Web Designer</title>
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Use Inter font family -->
+    <link  rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-30 bg-black/80 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="text-xl font-bold text-white tracking-widest">
+                <!-- Updated name in header -->
+                <span class="text-violet-400">VAISHNAVI</span> SUTHAR
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <!-- Updated Navigation links -->
+                <a href="#hero" class="text-gray-300 hover:text-violet-400 transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-violet-400 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-violet-400 transition">Skills</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-violet-400 transition">My Work</a>
+                <a href="#certifications" class="text-gray-300 hover:text-violet-400 transition">Certifications</a>
+                <a href="#contact" class="text-gray-300 hover:text-violet-400 transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 w-full bg-black/90 backdrop-blur-sm">
+            <nav class="flex flex-col space-y-4 p-4 text-center">
+                <a href="#hero" class="text-gray-300 hover:text-violet-400 transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-violet-400 transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-violet-400 transition">Skills</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-violet-400 transition">My Work</a>
+                <a href="#certifications" class="text-gray-300 hover:text-violet-400 transition">Certifications</a>
+                <a href="#contact" class="text-gray-300 hover:text-violet-400 transition">Contact</a>
+            </nav>
+        </div>
+
+        <script>
+        const btn = document.querySelector('header button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        </script>
+
+    </header>
+
+    <main class="pt-16">
+    <section id="hero" class="hero-bg py-20 md:py-32 text-gray-900 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+            <!-- Blur Circle BG -->
+            <div class="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-violet-400 
+                rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse">
+            </div>
+
+            <div class="relative z-10 md:flex md:flex-row-reverse md:items-center md:space-x-12 md:space-x-reverse">
+
+                <!-- Profile Image (Right Side) -->
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <img src="Images/pr_.jpg"
+                        alt="Profile Picture of Vaishnavi Suthar"
+                        class="w-80 h-80 object-cover rounded-full shadow-xl border-4 border-white wave-motion">
+                </div>
+
+                <!-- Text Content (Left Side) -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-gray-700 font-medium mb-1">Hello, I'm</p>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold mb-2 text-transparent bg-clip-text 
+                        bg-gradient-to-r from-violet-600 to-pink-500">
+                        Vaishnavi Suthar
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-semibold text-gray-800 mb-6">
+                        UI/UX Designer & Web Designer
+                    </p>
+
+                    <p class="text-lg text-gray-600 mb-8">
+                        A passionate UI/UX designer dedicated to crafting intuitive and visually stunning digital experiences.
+                         As a final year B.Tech student, I blend creativity with technical expertise to transform ideas into 
+                         user-centered designs that not only look beautiful but also solve real-world problems.
+                    </p>
+
+                    <div class="flex justify-start space-x-4">
+                        <a href="#contact"
+                           class="inline-block px-8 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-500 
+                           text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 
+                           transition-all duration-300 ease-in-out">
+                            Get In Touch
+                        </a>
+
+                        <a href="#portfolio"
+                           class="inline-block px-8 py-3 bg-transparent border-2 border-violet-500 
+                           text-violet-600 font-semibold rounded-full shadow-lg hover:bg-violet-500 hover:text-white 
+                           transform hover:scale-105 transition-all duration-300 ease-in-out">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+        <!-- About Section -->
+        <section id="about" class="bg-stone-900 text-white py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-violet-400">About Me</h2>
+
+
+
+
+                <!-- Updated About Me Description and Education -->
+                <div class="max-w-4xl mx-auto p-6 md:p-8 gradient-border-box">
+                    <div class="content-layer text-lg text-gray-400 leading-relaxed">
+                        <p class="mb-6">
+                            I'm a final-year B.Tech student with a growing passion for UI/UX design and digital product development. I enjoy creating clean, user-friendly, and visually appealing interfaces that provide meaningful experiences. My skills include wireframing, prototyping, user research, design thinking, and building responsive designs using modern tools and design principles.
+                        </p>
+                        <p class="mb-8">
+                            I’m actively seeking internship or full-time opportunities in UI/UX design where I can work on real-world projects, collaborate with product teams, and continue improving my design thinking and problem-solving skills.
+                        </p>
+
+                        <!-- Added Education Section -->
+                        <h3 class="text-xl font-bold text-violet-400 mb-4 border-t border-stone-700 pt-4">Education & Schooling</h3>
+                        
+                        <ul class="space-y-4">
+                            <!-- College Education -->
+                            <li class="p-3 bg-stone-800 rounded-lg shadow-inner border border-stone-700">
+                                <p class="font-semibold text-white">B.Tech in Agricultural Information Technology (2021 - 2026)</p>
+                                <p class="text-sm text-gray-400">College of Agricultural Information Technology, AAU, Anand</p>
+                            </li>
+
+                            <!-- Higher Secondary Schooling -->
+                            <li class="p-3 bg-stone-800 rounded-lg shadow-inner border border-stone-700">
+                                <p class="font-semibold text-white">Higher Secondary Schooling (2019 - 2021)</p>
+                                <p class="text-sm text-gray-400">RPTP Science School, Anand, Gujarat</p>
+                            </li>
+                            
+                            <!-- Primary Schooling -->
+                            <li class="p-3 bg-stone-800 rounded-lg shadow-inner border border-stone-700">
+                                <p class="font-semibold text-white">Schooling (2010 - 2019)</p>
+                                <p class="text-sm text-gray-400">Gnanyagna Vidyalaya, Anand, Gujarat</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stats Bar With Animated Counting -->
+                <br>
+
+                <div class="max-w-4xl mx-auto mb-8">
+                    <div class="flex justify-around items-center bg-stone-900 p-8 rounded-2xl shadow-2xl border border-violet-700/40 backdrop-blur-xl">
+
+                        <!-- Projects Completed -->
+                        <div class="text-center flex-1 border-r border-stone-700/50 pr-6">
+                            <p id="countProjects"
+                            class="text-5xl font-extrabold tracking-wide text-transparent bg-clip-text 
+                                    bg-gradient-to-r from-violet-400 to-fuchsia-400 drop-shadow-lg animate-pulse-slow">
+                                0+
+                            </p>
+                            <p class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-widest mt-2">
+                                Projects Completed
+                            </p>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="text-center flex-1 pl-6">
+                            <p id="countCert"
+                            class="text-5xl font-extrabold tracking-wide text-transparent bg-clip-text 
+                                    bg-gradient-to-r from-violet-400 to-fuchsia-400 drop-shadow-lg animate-pulse-slow">
+                                0+
+                            </p>
+                            <p class="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-widest mt-2">
+                                Certifications
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section (UPDATED) -->
+        <section id="skills" class="bg-gray-50 text-gray-800 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">My Expertise</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Column 1: Core Design & UI/UX -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-violet-500">
+                        <h3 class="text-2xl font-semibold mb-4 text-violet-600 flex items-center">
+                            <span class="text-3xl mr-2"></span> Design & UI/UX
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Figma</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Photoshop</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Flash / 3DsMax</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Lightworks</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">UI/UX Design</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Graphics Design</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Programming & Web Development -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-pink-500">
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-600 flex items-center">
+                            <span class="text-3xl mr-2"></span> Development & Programming
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Languages -->
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-pink-50 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white">HTML/CSS</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-pink-50 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white">JavaScript</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-pink-50 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white">Python</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-pink-50 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white">PHP</span>
+                            <!-- Frameworks/DBs -->
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">ASP.NET MVC</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Bootstrap (Basic)</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">MySQL</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">SQLite (Basic)</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Advanced Tech & Tools -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-indigo-500">
+                        <h3 class="text-2xl font-semibold mb-4 text-indigo-600 flex items-center">
+                            <span class="text-3xl mr-2"></span> Technology & Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-indigo-50 border-indigo-500 text-indigo-600 hover:bg-indigo-500 hover:text-white">Machine Learning (Basic)</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium bg-indigo-50 border-indigo-500 text-indigo-600 hover:bg-indigo-500 hover:text-white">Artificial Intelligence (AI)</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">VS Code</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Visual Studio 2022</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Web Designing</span>
+                            <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Front-End Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (UPDATED) -->
+        <section id="portfolio" class="bg-stone-900 text-white py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-violet-400">Featured Work</h2>
+
+                <!-- Project Category Tabs -->
+                <div class="flex justify-center mb-10">
+                    <div class="bg-stone-800 p-2 rounded-xl shadow-inner shadow-violet-900/50 flex space-x-2">
+                        <button class="tab-button active" onclick="showProjects('academic')">Academic Projects</button>
+                        <button class="tab-button" onclick="showProjects('figma')">Figma Designs</button>
+                    </div>
+                </div>
+
+                <!-- Projects Container -->
+                <div id="project-container">
+
+                    <!-- Academic Projects Tab Content -->
+                    <div id="academic" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Academic Project 1: SRMS -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <div class="w-full h-48 bg-gray-900 flex items-center justify-center p-4">
+                                <img src="https://placehold.co/600x400/1e1e2d/ffffff?text=SRMS+Dashboard" alt="Student Result Management System" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 rounded-md opacity-70">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-semibold mb-2 text-violet-300">Student Result Management System (SRMS)</h3>
+                                <p class="text-gray-400 mb-4 text-sm flex-grow">A web-based system that automates student result processing with secure data storage, grade calculation, and instant publishing, offering role-based access for teachers and students.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-3 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Web Development</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Data Management</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Security</span>
+                                </div>
+                                <div class="flex space-x-4 mt-4">
+                                    <a href="javascript:void(0)" 
+   onclick="openImages('srms')" 
+   class="text-sm font-medium text-pink-400 hover:text-pink-300 transition">
+   View Images →
+</a>
+
+                                    <a href="https://github.com/Vaishnavi-Suthar/Student-Result-Management-System" class="text-sm font-medium text-violet-400 hover:text-violet-300 transition">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Project 2: Rainfall Prediction -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <div class="w-full h-48 bg-gray-900 flex items-center justify-center p-4">
+                                <img src="https://placehold.co/600x400/2d1e2e/ffffff?text=ML+Rainfall+Prediction" alt="Rainfall Prediction" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 rounded-md opacity-70">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-semibold mb-2 text-violet-300">Rainfall Prediction Using ML Techniques</h3>
+                                <p class="text-gray-400 mb-4 text-sm flex-grow">A Machine Learning model that predicts rainfall using historical weather data such as temperature, humidity, and wind speed. Implements Random Forest and ANN for accurate forecasting.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-3 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Machine Learning</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Python</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Random Forest</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Data Analysis</span>
+                                </div>
+                                <div class="flex space-x-4 mt-4">
+                                   <a href="javascript:void(0)" 
+   onclick="openImages('rainfall')" 
+   class="text-sm font-medium text-pink-400 hover:text-pink-300 transition">
+   View Images →
+</a>
+
+                                    <a href="https://github.com/Vaishnavi-Suthar/Rainfall-prediction/tree/main" class="text-sm font-medium text-violet-400 hover:text-violet-300 transition">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Project 3: PG Management -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <div class="w-full h-48 bg-gray-900 flex items-center justify-center p-4">
+                                <img src="https://placehold.co/600x400/2e2d1e/ffffff?text=PG+Management+System" alt="PG Management System" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 rounded-md opacity-70">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-semibold mb-2 text-violet-300">PG Management System</h3>
+                                <p class="text-gray-400 mb-4 text-sm flex-grow">A web application for managing PG operations including tenant records, rooms, and payments. Built using Python Flask, HTML/CSS/JS, and SQLite to reduce manual workload.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-3 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Python Flask</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Web Development</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">SQLite</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">HTML/CSS/JS</span>
+                                </div>
+                                <div class="flex space-x-4 mt-4">
+                                    <a href="javascript:void(0)" 
+   onclick="openImages('pg')" 
+   class="text-sm font-medium text-pink-400 hover:text-pink-300 transition">
+   View Images →
+</a>
+
+                                    <a href="https://github.com/Vaishnavi-Suthar/PG-Management-System" class="text-sm font-medium text-violet-400 hover:text-violet-300 transition">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Project 4: AI ChatBot -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <div class="w-full h-48 bg-gray-900 flex items-center justify-center p-4">
+                                <img src="https://placehold.co/600x400/2e2d1e/ffffff?text=AI+ChatBot+System" 
+                                    alt="AI ChatBot System" 
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 rounded-md opacity-70">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-semibold mb-2 text-violet-300">AI ChatBot System</h3>
+                                <p class="text-gray-400 mb-4 text-sm flex-grow">An AI-powered ChatBot built with Python and NLP that handles user queries using intent detection and contextual responses, featuring a clean, easy-to-use chat interface.
+                                </p>
+
+                                <div class="flex flex-wrap gap-2 mt-auto pt-3 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Python</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">NLP</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">Machine Learning</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-pink-900/20 border-pink-700 text-pink-400">ChatBot</span>
+                                </div>
+
+                                <div class="flex space-x-4 mt-4">
+                                    <a href="javascript:void(0)" 
+   onclick="openImages('chatbot')" 
+   class="text-sm font-medium text-pink-400 hover:text-pink-300 transition">
+   View Images →
+</a>
+
+
+                                    <a href="https://github.com/Vaishnavi-Suthar/Ai_Chatbot" class="text-sm font-medium text-violet-400 hover:text-violet-300 transition">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Figma Designs Tab Content (Initially Hidden) -->
+                    <div id="figma" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 hidden">
+                        
+                        <!-- Figma Design 1: Travel Blog -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <img src="https://placehold.co/400x300/0CA201/ffffff?text=Travel+Blog+Design" alt="Travel Blog Design" class="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-500">                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-lg font-semibold mb-1 text-pink-300">Travel Blog Design</h3>
+                                <p class="text-gray-400 text-xs mb-3 flex-grow">Engaging travel blog interface with immersive imagery and intuitive navigation for exploring destinations.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-2 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Figma</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">UI/UX</span>
+                                </div>
+                                <a href="https://www.figma.com/proto/JWSzJOsS4ARuGPMVAYhe47/Travel-Blog?page-id=0%3A1&node-id=101-14&scaling=scale-down-width&content-scaling=fixed&t=Qv7nEuLag157gD74-1" class="text-sm font-medium text-pink-400 hover:text-pink-300 transition mt-3">View Figma Link &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Figma Design 2: Wine Website -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <img src="https://placehold.co/400x300/4c3e8e/ffffff?text=Wine+Website+UX" alt="Wine Website Design" class="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-lg font-semibold mb-1 text-pink-300">Wine Website Design</h3>
+                                <p class="text-gray-400 text-xs mb-3 flex-grow">Elegant and sophisticated wine website design featuring premium aesthetics and refined user experience.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-2 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Figma</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Branding</span>
+                                </div>
+                                <a href="https://www.figma.com/proto/cVvxh5E5N2DJOgSNkVHqRL/Wine?page-id=0%3A1&node-id=247-61&starting-point-node-id=224%3A10&scaling=scale-down&content-scaling=fixed&t=jrwoOdF75aBaI1iF-1" class="text-sm font-medium text-pink-400 hover:text-pink-300 transition mt-3">View Figma Link &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Figma Design 3: Portfolio Website -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <img src="https://placehold.co/400x300/FFD500/ffffff?text=Portfolio+Template" alt="Portfolio Website Design" class="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-lg font-semibold mb-1 text-pink-300">Portfolio Website Design</h3>
+                                <p class="text-gray-400 text-xs mb-3 flex-grow">Clean and minimalist portfolio template for creative professionals, focusing on speed and readability.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-2 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Figma</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Minimalism</span>
+                                </div>
+                                <a href="https://www.figma.com/proto/Vr06OYLm2bYXEPAVCIGZF6/Portfolio?page-id=0%3A1&node-id=235-279&p=f&viewport=127%2C-1213%2C0.19&t=5lI9yn5MYXW5lCzA-1&scaling=scale-down-width&content-scaling=fixed" class="text-sm font-medium text-pink-400 hover:text-pink-300 transition mt-3">View Figma Link &rarr;</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Figma Design 4: Food Delivery App -->
+                        <div class="group overflow-hidden rounded-xl bg-stone-800 shadow-2xl hover:shadow-violet-500/50 transition-shadow duration-300 flex flex-col h-full">
+                            <img src="https://placehold.co/400x300/ec4899/ffffff?text=Food+Delivery+App+UI" alt="Food Delivery App UI" class="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-lg font-semibold mb-1 text-pink-300">Food Delivery App UI</h3>
+                                <p class="text-gray-400 text-xs mb-3 flex-grow">Modern food delivery app interface with smooth user flows, vibrant design elements, and easy ordering process.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto pt-2 border-t border-stone-700">
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Figma</span>
+                                    <span class="skill-tag text-xs px-3 py-1 bg-violet-900/20 border-violet-700 text-violet-400">Mobile UX</span>
+                                </div>
+                                <a href="https://www.figma.com/proto/FIQqu34lwh8VUhZOvNOV9m/Grabber-Grocrey-App?page-id=0%3A1&node-id=1-1985&p=f&viewport=1595%2C237%2C0.15&t=tv8hx5BKezBQHKrL-1&scaling=scale-down&content-scaling=fixed" class="text-sm font-medium text-pink-400 hover:text-pink-300 transition mt-3">View Figma Link &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Gemini API Project Idea Generator (Moved below the main portfolio) 
+                <div class="mt-16 p-6 md:p-8 bg-stone-800 rounded-xl shadow-inner shadow-violet-900/50">
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400 flex items-center">
+                        Design Project Idea Generator ✨
+                    </h3>
+                    <p class="text-gray-400 mb-4 text-sm">Need inspiration? Generate a modern UI/UX design challenge or a web design project idea based on a theme or industry (e.g., "Fintech app redesign" or "SaaS dashboard for remote work").</p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 mb-6">
+                        <input type="text" id="project-prompt" placeholder="E.g., UI/UX case study for an e-learning platform" class="flex-grow p-3 rounded-lg bg-stone-700 border border-violet-600 text-white placeholder-gray-500 focus:ring-violet-500 focus:border-violet-500 transition duration-150" value="Figma design for a minimalist portfolio builder">
+                        <button id="generate-button" onclick="generateProjectIdea()" class="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                            Generate Idea
+                        </button>
+                    </div>
+
+                    Output and Loading Area 
+                    <div id="project-output" class="p-4 bg-stone-900 rounded-lg border border-violet-700 hidden">
+                        <div id="loading-indicator" class="flex items-center justify-center text-violet-400 space-x-2 hidden">
+                            <div class="spinner"></div>
+                            <p>Generating the perfect design challenge...</p>
+                        </div>
+                        <div id="project-result-content">
+                             Generated content will appear here 
+                        </div>
+                    </div>
+                    <p id="api-error" class="text-red-400 text-sm mt-2 hidden">An error occurred while fetching the idea. Please try again.</p>
+
+                </div>
+                 End of Gemini API Project Idea Generator -->
+
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="bg-gray-50 text-gray-800 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Title updated -->
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Certifications & Achievements</h2>
+
+                <!-- Certificate list grid -->
+                <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Certification Item 1: AI/ML (Clickable) -->
+                    <div onclick="openCertificateModal('aiml-iirs')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900" data-cert-id="aiml-iirs">Application of AI/ML Model for Specific Crop Acreage Mapping</h3>
+                            <p class="text-sm text-gray-500">Technical Domain (IIRS, ISRO)</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 2: Frontend (Generic, but styled for future use) -->
+                    <div onclick="openCertificateModal('frontend-beginners')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Front-end for Beginners</h3>
+                            <p class="text-sm text-gray-500">Web Development</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 3: Design -->
+                    <div onclick="openCertificateModal('design-thinking')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Design Thinking</h3>
+                            <p class="text-sm text-gray-500">UI/UX Principles</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certification Item 4: Cybersecurity -->
+                    <div onclick="openCertificateModal('cybersecurity-intro')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Introduction to Cybersecurity Awareness</h3>
+                            <p class="text-sm text-gray-500">Security Fundamentals</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 5: Canva -->
+                    <div onclick="openCertificateModal('canva-marketing')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Marketing with Canva</h3>
+                            <p class="text-sm text-gray-500">Visual Content Creation</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 6: Python -->
+                    <div onclick="openCertificateModal('python-basic')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Python (Basic)</h3>
+                            <p class="text-sm text-gray-500">Programming Language</p>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 7: SQL -->
+                    <div onclick="openCertificateModal('sql-basic')" class="cursor-pointer p-5 bg-white rounded-xl shadow-lg border border-gray-200 hover:border-violet-500 transition duration-300 flex items-center space-x-3 transform hover:scale-[1.02] hover:shadow-xl">
+                        <span class="text-violet-600 text-2xl">★</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">SQL (Basic)</h3>
+                            <p class="text-sm text-gray-500">Database Fundamentals</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+       
+        <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-black relative overflow-hidden">
+
+        <!-- Blurred Gradient Decorations -->
+        <div class="absolute top-10 right-10 w-72 h-72 bg-violet-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-pink-600/20 rounded-full blur-3xl animate-pulse"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold text-center mb-12 text-violet-400">
+                Let’s Connect
+            </h2>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                <!-- Left Column: Direct Details -->
+                <div class="space-y-10">
+
+                    <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 
+                                shadow-[0_0_40px_-10px_rgba(168,85,247,0.4)] 
+                                hover:shadow-[0_0_50px_-6px_rgba(236,72,153,0.5)] 
+                                hover:-translate-y-1 transition-all duration-300">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center">                       
+                            Direct Details
+                        </h3>
+
+                        <ul class="space-y-5 text-gray-300">
+
+                           <li>
+                                <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Email</p>
+                                <a href="mailto:sutharvaishu172@gmail.com"
+                                class="text-lg font-medium hover:text-violet-400 transition">
+                                sutharvaishu172@gmail.com
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Phone</p>
+                                <a href="tel:+919104477736"
+                                class="text-lg font-medium hover:text-violet-400 transition">
+                                    +91 91044 77736
+                                </a>
+                            </li>
+
+                            <li>
+                                <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Location</p>
+                                <p class="text-lg font-medium hover:text-violet-400 transition">Anand, Gujarat, India</p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 
+                                shadow-[0_0_40px_-10px_rgba(139,92,246,0.4)] 
+                                hover:shadow-[0_0_50px_-6px_rgba(236,72,153,0.5)] 
+                                hover:-translate-y-1 transition-all duration-300">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center">                        
+                            Connect Online
+                        </h3>
+
+                        <div class="flex flex-col space-y-4">
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/vaishnavi-suthar-1842642a5"
+                            target="_blank"
+                            class="flex items-center justify-center space-x-3 bg-[#0A66C2] 
+                                    text-white py-3 rounded-xl font-semibold 
+                                    shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                                <span>LinkedIn</span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/Vaishnavi-Suthar"
+                            target="_blank"
+                            class="flex items-center justify-center space-x-3 bg-gray-900 
+                                    text-white py-3 rounded-xl font-semibold 
+                                    shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">                           
+                                <span>GitHub</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="p-10 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 
+                                shadow-[0_0_50px_-12px_rgba(168,85,247,0.4)] 
+                                hover:shadow-[0_0_60px_-10px_rgba(236,72,153,0.5)] 
+                                transition-all duration-300">
+
+                        <form id="contactForm">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-300 mb-1">Name</label>
+                                    <input type="text" id="name" required
+                                        class="w-full px-4 py-3 rounded-xl bg-black/30 border border-gray-600 
+                                                text-white placeholder-gray-400
+                                                focus:ring-2 focus:ring-violet-500 transition duration-150">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-300 mb-1">Email</label>
+                                    <input type="email" id="email" required
+                                        class="w-full px-4 py-3 rounded-xl bg-black/30 border border-gray-600 
+                                                text-white placeholder-gray-400
+                                                focus:ring-2 focus:ring-violet-500 transition duration-150">
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-semibold text-gray-300 mb-1">Message</label>
+
+                                    <textarea id="message" rows="4" required
+                                        class="w-full px-4 py-3 rounded-xl bg-black/30 border border-gray-600 
+                                            text-white placeholder-gray-400
+                                            focus:ring-2 focus:ring-violet-500 transition duration-150"></textarea>
+
+                                    <!-- Status message here -->
+                                    <p id="contact-status" class="text-sm text-gray-300 mt-2"></p>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full mt-8 py-4 text-lg font-semibold text-white rounded-xl 
+                                    bg-gradient-to-r from-violet-600 to-fuchsia-600 
+                                    shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                                Send Message
+                            </button>
+
+                            <!-- Status message below the button -->
+                            <p id="contact-status" class="text-center text-gray-300 mt-4"></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<!-- Updated Footer -->
+<footer class="bg-stone-900 text-gray-400 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- QUICK LINKS (Horizontal) + Back to Top -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10">
+
+            <!-- Quick Links Horizontal -->
+            <nav class="flex flex-wrap justify-center space-x-6 text-sm font-medium">
+                <a href="#hero" class="hover:text-violet-400 transition">Home</a>
+                <a href="#about" class="hover:text-violet-400 transition">About</a>
+                <a href="#skills" class="hover:text-violet-400 transition">Skills</a>
+                <a href="#portfolio" class="hover:text-violet-400 transition">My Work</a>
+                <a href="#certifications" class="hover:text-violet-400 transition">Certifications</a>
+                <a href="#contact" class="hover:text-violet-400 transition">Contact</a>
+            </nav>
+
+            <!-- Back to Top Button (Right Side) -->
+            <button onclick="scrollToTop()" 
+                class="mt-6 md:mt-0 bg-stone-800 hover:bg-stone-700 text-gray-400 hover:text-white p-3 rounded-lg transition-all duration-300 shadow-lg"> Back to Top
+                <i class="fas fa-chevron-up"></i>
+            </button>
+
+        </div>
+
+        <!-- DIVIDER LINE -->
+        <div class="border-t border-stone-700 pt-6"></div>
+
+        <!-- COPYRIGHT SECTION -->
+        <div class="text-center mt-4">
+            <p class="text-sm text-gray-400">
+                &copy; 2025 <span class="text-violet-400 font-medium">Vaishnavi Suthar</span>. All rights reserved.
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+                Built with ❤️ and passion for crafting beautiful experiences.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+    <!-- Certificate Modal Structure (Hidden by default) -->
+    <div id="cert-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4" onclick="closeCertificateModal()">
+        <div id="cert-modal-content" class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform modal-enter" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <div class="p-4 flex justify-end">
+                <button onclick="closeCertificateModal()" class="text-gray-400 hover:text-gray-800 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="px-6 pb-8 md:px-10 md:pb-10">
+                <h3 id="modal-cert-title" class="text-3xl font-bold text-gray-900 mb-2"></h3>
+                <p class="text-violet-600 font-semibold mb-4">
+                    <span id="modal-cert-org"></span> - <span id="modal-cert-date" class="text-sm text-gray-500 font-medium"></span>
+                </p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column: Image and Details -->
+                    <div class="space-y-6">
+                        <!-- Certificate Image Placeholder -->
+                        <img id="modal-cert-image" src="" alt="Certificate Image" class="w-full h-auto rounded-lg shadow-lg border border-gray-200">
+                        
+                        <div class="border-t pt-4 border-gray-100">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">Certificate Earned By</h4>
+                            <p id="modal-cert-earned-by" class="text-gray-600 text-lg font-medium"></p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Description and Skills -->
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-2 border-b pb-1 border-violet-100">About this Certificate</h4>
+                            <p id="modal-cert-description" class="text-gray-700 leading-relaxed"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-3 border-b pb-1 border-violet-100">Skills Covered</h4>
+                            <div id="modal-cert-skills" class="flex flex-wrap gap-2">
+                                <!-- Skill tags will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Image Modal -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black/80 hidden z-50 flex items-center justify-center p-4">
+
+    <div class="bg-stone-900 p-6 rounded-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
+
+        <!-- Close Button -->
+        <button onclick="closeModal()"
+            class="absolute top-3 right-3 text-white text-2xl hover:text-pink-400">✖</button>
+
+        <h3 id="modalTitle" class="text-2xl font-semibold mb-6 text-violet-300 text-center"></h3>
+
+        <!-- 2 Column Grid -->
+        <div id="modalImages" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init("hpEhoyqOMR-oPVrRF");
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* -----------------------------------------------------
+   ROOT VARIABLES
+----------------------------------------------------- */
+:root {
+    --primary-purple: #7c3aed;
+    --secondary-pink: #ec4899;
+    --gradient-start: #f3e8ff;
+    --gradient-end: #faf5ff;
+}
+
+/* -----------------------------------------------------
+   GLOBAL
+----------------------------------------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0c0a09; /* Dark background */
+}
+
+/* -----------------------------------------------------
+   HERO GRADIENT SECTION
+----------------------------------------------------- */
+.hero-bg {
+    background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------------
+   GRADIENT BORDER BOX (Cards)
+----------------------------------------------------- */
+.gradient-border-box {
+    position: relative;
+    background: #1c1917;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gradient-border-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        var(--primary-purple),
+        var(--secondary-pink),
+        var(--primary-purple)
+    );
+    opacity: 0.3;
+    animation: rotate-gradient 6s linear infinite;
+    z-index: 0;
+}
+
+.gradient-border-box:hover::before {
+    opacity: 0.8;
+    animation-duration: 4s;
+}
+
+.content-layer {
+    position: relative;
+    z-index: 10;
+    background: #1c1917;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    height: 100%;
+}
+
+/* Rotating glow effect */
+@keyframes rotate-gradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* -----------------------------------------------------
+   ANIMATIONS (Wave + Spinner)
+----------------------------------------------------- */
+.wave-motion {
+    animation: wave 2s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #ec4899;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* -----------------------------------------------------
+   MODAL ANIMATIONS
+----------------------------------------------------- */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.95);
+}
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* -----------------------------------------------------
+   PORTFOLIO TABS
+----------------------------------------------------- */
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    color: #a78bfa;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.tab-button:hover {
+    color: #e9d5ff;
+}
+
+.tab-button.active {
+    background-color: #6d28d9;
+    color: white;
+    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.5);
+}
+
+/* -----------------------------------------------------
+   SKILL TAGS
+----------------------------------------------------- */
+.skill-tag {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid var(--primary-purple);
+    color: var(--primary-purple);
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    background: var(--primary-purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.5);
+}
+
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+.footer-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.back-to-top {
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-2px);
+}
